@@ -39,8 +39,8 @@ ball.shape("square")
 ball.color("yellow")
 ball.penup()
 ball.goto(0, 0)
-ball.dx = .15
-ball.dy = .15
+ball.dx = .1
+ball.dy = .1
 
 # Pen
 pen = turtle.Turtle()
@@ -94,12 +94,12 @@ while True:
     if ball.ycor() > 290:
         ball.sety(290)
         ball.dy *= -1
-        os.system("afplay bounce.wav&")
+        os.system("aplay bounce.wav&")
     
     elif ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1
-        os.system("afplay bounce.wav&")
+        os.system("aplay bounce.wav&")
 
     # Left and right
     if ball.xcor() > 350:
@@ -119,9 +119,9 @@ while True:
     # Paddle and ball collisions
     if ball.xcor() < -340 and ball.ycor() < paddle_a.ycor() + 50 and ball.ycor() > paddle_a.ycor() - 50:
         ball.dx *= -1 
-        os.system("afplay bounce.wav&")
+        os.system("aplay bounce.wav&")
     
     elif ball.xcor() > 340 and ball.ycor() < paddle_b.ycor() + 50 and ball.ycor() > paddle_b.ycor() - 50:
         ball.dx *= -1
-        os.system("afplay bounce.wav&")
+        os.system("aplay bounce.wav&")
     
